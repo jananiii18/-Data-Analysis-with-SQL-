@@ -64,11 +64,10 @@ SELECT * FROM Average_CSAT_Per_Agent;
 
 -- Index for faster queries by agent and date
 CREATE INDEX idx_custsupport_agent_orderdate
-ON dbo.Customer_support_data (Agent_name, order_date_time);
+ON dbo.Customer_support_data (Agent_name);
 
 -- Query 
 SELECT Agent_name,
        order_date_time
 FROM dbo.Customer_support_data
-WHERE Agent_name = 'John Doe'
-  AND order_date_time >= '2023-08-01';
+WHERE Agent_name = 'Dillon Miller';
